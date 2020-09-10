@@ -1,0 +1,12 @@
+.main-header {
+  background-color: #8082ee;
+  background-image: url("../images/diamond-upholstery.png");
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 100vw;
+  margin-top: calc(72px + 40px);
+}

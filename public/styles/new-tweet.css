@@ -1,0 +1,97 @@
+section.new-tweet .error{
+  color: red;
+  border: 3px solid red;
+  text-align: center;
+  display: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+  margin-top: 50px;
+}
+
+form label {
+  font-weight: 700;
+}
+
+textarea {
+  border: none;
+  border-bottom: 4px solid #545149;
+  background: transparent;
+}
+
+.action-container {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Bungee, sans-serif;
+}
+
+button {
+  background: #4056A1;
+  color: #FFF;
+}
+
+.red {
+  color: red;
+}
+
+article.tweet {
+  border: 4px solid #545149;
+  height: 250px;
+  margin: 35px 0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: box-shadow 1s;
+}
+
+article.tweet header {
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+article.tweet footer {
+  border-top: 4px solid #545149;
+  padding: 10px;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: space-between;
+}
+
+article.tweet h4 {
+  margin: 0;
+  font-weight: 300;
+}
+
+article.tweet .user-handle {
+  opacity: 0;;
+  font-weight: 700;
+   transition: opacity 1s;
+}
+
+article.tweet .user-container {
+  display: flex;
+  justify-content: space-between;;
+  margin-bottom: 20px;
+}
+
+article.tweet .user-info {
+  display: flex;
+}
+
+article.tweet img {
+  width: 25px;
+  opacity: 0.6;
+}
+
+article.tweet:hover {
+  box-shadow: 3px 3px 0 3px #8082ee;
+}
+
+article.tweet:hover .user-handle {
+  opacity: 0.6;
+}
