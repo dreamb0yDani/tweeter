@@ -8,8 +8,9 @@ const renderTweets = function (tweets) {
   // loops through tweets
   // calls createTweetElement for each tweet
   // takes return value and appends it to the tweets container
-  // console.log(tweets, 'array')
 
+  // Check if the main container has any element or not
+  // if not, render whole array, else render most recent
   $("#tweets-container").children().length === 0 ? tweets : tweets = [tweets[tweets.length - 1]]
 
   for (const element of tweets) {
@@ -18,12 +19,14 @@ const renderTweets = function (tweets) {
 
 }
 
+// check if there is any script and parse it into string
 const escape = function (str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
 
+// feeding the HTML element and returning it
 const createTweetElement = function (tweet) {
   let $tweet = `
     <article class="tweet">
@@ -54,8 +57,10 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
+// JQuery logic to POSt tweet and render it,
 $(document).ready(() => {
 
+  // GET the tweets from server and then render them on DOM
   const loadTweets = () => {
     // $("#tweets-container").empty();
     $.ajax("/tweets", { method: "GET", dataType: "JSON" })
@@ -64,17 +69,20 @@ $(document).ready(() => {
       })
   }
 
+  // Event Handler on submit
   $("form").on("submit", function (event) {
     event.preventDefault();
 
-    let tweetInput = $("#tweet-text").val();
-
-    if (tweetInput.length <= 0) {
+    let tweetInput = $("#tweet-text").val().length;
+    // Validation of the input
+    if (!tweetInput) {
       $(".error").text("Please enter the tweet!").slideDown("slow")
-    } else if (tweetInput.length > 140) {
+    } else if (tweetInput > 140) {
       $(".error").text("Character limit exceeded!").slideDown("slow")
     } else {
       $(".error").slideUp("slow")
+
+      //AJAX POST request on submit
       $.ajax("/tweets", {
         method: "POST",
         data: $(this).serialize()
