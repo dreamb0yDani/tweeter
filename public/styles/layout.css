@@ -29,3 +29,21 @@ main {
   margin: auto;
   text-align: justify;
 }
+
+@media only screen  and (min-width: 768px){
+  .head-main-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 90px 60px;
+  }
+
+  .main-header {
+    margin-top: 200px;
+    max-width: 35%;
+  }
+  main.container {
+    width: 55%;
+    margin: 0;
+    text-align: justify;
+  }
+}

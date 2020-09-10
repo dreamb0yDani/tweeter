@@ -9,7 +9,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around; 
-  margin-top: 50px;
+  margin-top: calc(72px + 40px);
 }
 
 form label {
