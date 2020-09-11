@@ -10,9 +10,11 @@ In addition to the main requirement to complete this course, a stretch activity 
 
 ## Final Product
 
-![]()
-![]()
-![]()
+!["tweeter desktop view"](https://github.com/dreamb0yDani/tweeter/blob/master/docs/desktop-view.png?raw=true)
+
+!["Character exceed error"](https://github.com/dreamb0yDani/tweeter/blob/master/docs/form-char-error.png?raw=true)
+
+!["mobile view of the app"](https://github.com/dreamb0yDani/tweeter/blob/master/docs/mobile-view.png?raw=true)
 
 ## Dependencies
 
