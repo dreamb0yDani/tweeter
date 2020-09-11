@@ -12,6 +12,11 @@ section.new-tweet .error{
   height: 80px;
 }
 
+.down-arrow {
+  animation: down-animate 2s infinite;
+  height: 90px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -105,6 +110,11 @@ article.tweet:hover .user-handle {
 
 .toggle-form:hover {
   background-color: #696ce9;
+}
+
+@keyframes down-animate {
+  0%, 100% {height: 10px;}
+  50% {height: 40px;}
 }
 
 @media only screen  and (min-width: 768px){
