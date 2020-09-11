@@ -61,6 +61,10 @@ const createTweetElement = function (tweet) {
 $(document).ready(() => {
 
   // GET the tweets from server and then render them on DOM
+  $(".toggle-form").on("click", () => {
+    $("form").toggle(1000);
+  })
+
   const loadTweets = () => {
     // $("#tweets-container").empty();
     $.ajax("/tweets", { method: "GET", dataType: "JSON" })
