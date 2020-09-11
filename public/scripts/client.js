@@ -47,9 +47,9 @@ const createTweetElement = function (tweet) {
           ${tweet.created_at}
         </div>
         <div>
-          <img src="./images/flag-alt-solid-24.png" alt="flag">
-          <img src="./images/repost-regular-24.png" alt="repost">
-          <img src="./images/heart-solid-24.png" alt="like">
+          <img class="footer-icons" src="./images/flag-alt-solid-24.png" alt="flag">
+          <img class="footer-icons" src="./images/repost-regular-24.png" alt="repost">
+          <img class="footer-icons" src="./images/heart-solid-24.png" alt="like">
         </div>
       </footer>
     </article>

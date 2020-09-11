@@ -74,6 +74,10 @@ article.tweet footer {
   justify-content: space-between;
 }
 
+.footer-icons:hover {
+  opacity: 1;
+}
+
 article.tweet h4 {
   margin: 0;
   font-weight: 300;
