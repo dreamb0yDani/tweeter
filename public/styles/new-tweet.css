@@ -5,6 +5,13 @@ section.new-tweet .error{
   display: none;
 }
 
+.toggle-form {
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  height: 80px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -94,4 +101,38 @@ article.tweet:hover {
 
 article.tweet:hover .user-handle {
   opacity: 0.6;
+}
+
+.toggle-form:hover {
+  background-color: #696ce9;
+}
+
+@media only screen  and (min-width: 768px){
+  .head-main-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 150px 60px;
+  }
+
+  .main-header {
+    margin-top: 0;
+    max-width: 35%;
+  }
+  
+  article.tweet {
+    margin: 0 0 35px;
+  }
+
+  .toggle-form:hover {
+    background-color: #1e3da1;
+  }
+
+  form {
+    margin-top: 0;
+  }
+
+  main.container {
+    width: 60%;
+    margin: 0;
+  }
 }
