@@ -1,7 +1,8 @@
 
 $(document).ready(function () {
 
-  $("#tweet-text").on("keydown", function () {
+  $("#tweet-text").on("keydown keyup", function () {
+
     const $thisParent = $(this).parent();
     const remainingChar = 140 - (this.textLength);
 
