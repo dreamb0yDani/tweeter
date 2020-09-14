@@ -28,6 +28,7 @@ const escape = function (str) {
 
 // feeding the HTML element and returning it
 const createTweetElement = function (tweet) {
+  const date = new Date(tweet.created_at * 1000).toUTCString()
   let $tweet = `
     <article class="tweet">
       <header>
@@ -44,7 +45,7 @@ const createTweetElement = function (tweet) {
       </header>
       <footer>
         <div>
-          ${tweet.created_at}
+          ${date}
         </div>
         <div>
           <img class="footer-icons" src="./images/flag-alt-solid-24.png" alt="flag">
